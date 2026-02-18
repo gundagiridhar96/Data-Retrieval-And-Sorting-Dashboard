@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee/Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="container">
+    <h2>Employee / Student Dashboard</h2>
+
+    <!-- Controls -->
+    <div class="controls">
+        <label>Sort by:</label>
+        <select id="sortBy">
+            <option value="">None</option>
+            <option value="name">Name</option>
+            <option value="dob">Date of Birth</option>
+        </select>
+
+        <label>Filter by Department:</label>
+        <select id="filterDept">
+            <option value="All">All</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Civil">Civil</option>
+        </select>
+
+        <button onclick="loadDashboard()">Apply</button>
+    </div>
+
+    <!-- Employee / Student Table -->
+    <table id="dashboardTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+                <th>Department</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Department Counts -->
+    <h3>Count per Department</h3>
+    <ul id="deptCount"></ul>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
